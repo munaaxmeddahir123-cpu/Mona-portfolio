@@ -1,14 +1,16 @@
 import teamflow from "../assets/projects/teamflow.png";
+import SWIB from "../assets/projects/SWIB.png";
 
 
 function Projects() {
 
   const projects = [
+
     {
       title: "TeamFlow Management System",
 
       description:
-        "A modern team management application that helps users organize projects, tasks, and collaboration.",
+        "A modern team management system that helps teams organize projects, tasks, and collaboration efficiently.",
 
       image: teamflow,
 
@@ -23,17 +25,46 @@ function Projects() {
         "https://github.com/yourusername/teamflow",
 
       demo:
-        "https://your-demo-link.com"
+        "https://your-teamflow-vercel-link.com",
+
+      video:
+        "https://your-video-link.com"
     },
 
 
     {
-      title: "E-Commerce Platform",
+      title: "Ganacsatada Haweenka Soomaaliyeed (SWIB)",
 
       description:
-        "A full-stack e-commerce application with products, authentication, and admin dashboard.",
+        "A responsive platform designed to support Somali women entrepreneurs and showcase their businesses.",
 
-     image: teamflow,
+      image: SWIB,
+
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive Design"
+      ],
+
+      github:
+        "https://github.com/munaaxmeddahir123-cpu/ganacsatada-h-somaliyeed-1",
+
+      demo:
+        "https://ganacsatada-h-somaliyeed-1-n7j0f09eb-muna-ahmed-s-projects.vercel.app",
+
+      video:
+        "https://www.tiktok.com/@riseacadmey/video/7637890477458754837"
+    },
+
+
+    {
+      title: "Connect",
+
+      description:
+        "A full-stack application focused on connecting people through a modern and user-friendly platform.",
+
+      image: teamflow,
 
       technologies: [
         "React",
@@ -43,37 +74,20 @@ function Projects() {
       ],
 
       github:
-        "https://github.com/yourusername/ecommerce",
+        "https://github.com/yourusername/connect",
 
       demo:
-        "https://your-demo-link.com"
-    },
+        "https://your-connect-vercel-link.com",
 
-
-    {
-      title: "Family Connect",
-
-      description:
-        "A platform designed to connect families and manage community information.",
-
-      image: teamflow,
-
-      technologies: [
-        "React",
-        "JavaScript",
-        "CSS"
-      ],
-
-      github:
-        "https://github.com/yourusername/family-connect",
-
-      demo:
-        "https://your-demo-link.com"
+      video:
+        "https://your-video-link.com"
     }
+
   ];
 
 
   return (
+
     <section
       id="projects"
       className="py-20 px-6 bg-gray-950"
@@ -126,8 +140,6 @@ function Projects() {
             >
 
 
-              {/* Project Image */}
-
               <img
                 src={project.image}
                 alt={project.title}
@@ -148,13 +160,13 @@ function Projects() {
                 </h3>
 
 
+
                 <p className="text-gray-400 mt-3 leading-6">
                   {project.description}
                 </p>
 
 
 
-                {/* Technologies */}
 
                 <div className="flex flex-wrap gap-2 mt-5">
 
@@ -180,23 +192,8 @@ function Projects() {
 
 
 
-                {/* Links */}
 
-                <div className="flex gap-5 mt-6">
-
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                    text-purple-400
-                    hover:underline
-                    "
-                  >
-                    GitHub →
-                  </a>
-
+                <div className="flex flex-wrap gap-4 mt-6">
 
 
                   <a
@@ -208,7 +205,35 @@ function Projects() {
                     hover:underline
                     "
                   >
-                    Live Demo →
+                    🌐 Live Demo
+                  </a>
+
+
+
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                    text-purple-400
+                    hover:underline
+                    "
+                  >
+                    💻 GitHub
+                  </a>
+
+
+
+                  <a
+                    href={project.video}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                    text-purple-400
+                    hover:underline
+                    "
+                  >
+                    🎥 Video
                   </a>
 
 
@@ -220,6 +245,7 @@ function Projects() {
 
             </div>
 
+
           ))}
 
 
@@ -230,6 +256,7 @@ function Projects() {
 
 
     </section>
+
   );
 }
 
