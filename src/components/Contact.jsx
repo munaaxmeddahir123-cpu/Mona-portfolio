@@ -1,65 +1,128 @@
 function Contact() {
   return (
-    <section id="contact" className="py-20 px-6">
+    <section
+      id="contact"
+      className="
+      py-20 px-6
+      bg-white text-black
+      dark:bg-black dark:text-white
+      "
+    >
 
       <div className="max-w-4xl mx-auto text-center">
 
-
-        <h2
-          className="
-          text-3xl
-          sm:text-4xl
-          font-bold
-          text-purple-400
-          "
-        >
+        {/* Title */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-gradient">
           Contact Me
         </h2>
 
-
-        <p className="mt-5 text-gray-400 text-sm sm:text-base">
+        <p className="mt-5 text-gray-600 dark:text-gray-400 text-sm sm:text-base">
           Have a project in mind? Let's build something amazing together 🚀
         </p>
 
-
+        {/* Card */}
         <div
           className="
-          mt-10
-          bg-gray-950
-          border
-          border-white/10
+          mt-12
           rounded-3xl
           p-8
-          space-y-5
+          space-y-8
+          border
+          border-gray-200
+          dark:border-white/10
+          bg-gray-50
+          dark:bg-gray-900
+          shadow-lg
           "
         >
 
-          <p>
-            Email:{" "}
+          {/* Email */}
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400">
+              Email
+            </h3>
+
             <a
               href="mailto:munaaxmed123@gmail.com"
-              className="text-purple-400 hover:underline break-all"
+              className="
+              block mt-1
+              text-lg
+              text-purple-600
+              dark:text-purple-400
+              hover:underline
+              break-all
+              "
             >
               munaaxmed123@gmail.com
             </a>
-          </p>
+          </div>
 
+          {/* GitHub */}
+          <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400">
+              GitHub
+            </h3>
 
-          <p>
-            GitHub:{" "}
             <a
               href="https://github.com/munaaxmeddahir123-cpu"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple-400 hover:underline break-all"
+              className="
+              block mt-1
+              text-lg
+              text-purple-600
+              dark:text-purple-400
+              hover:underline
+              break-all
+              "
             >
               github.com/munaaxmeddahir123-cpu
             </a>
-          </p>
+          </div>
 
+          {/* LinkedIn */}
+           <div>
+            <h3 className="text-sm text-gray-500 dark:text-gray-400">
+              LinkedIn
+            </h3>
+
+            <a
+              href=" https://www.linkedin.com/feed/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+              block mt-1
+              text-lg
+              text-purple-600
+              dark:text-purple-400
+              hover:underline
+              break-all
+              "
+            >
+             https://www.linkedin.com/feed/
+            </a>
+          </div>
+
+          {/* Button */}
+          <a
+            href="mailto:munaaxmed123@gmail.com"
+            className="
+            inline-block
+            mt-6
+            px-8 py-3
+            rounded-full
+            bg-gradient-to-r
+            from-purple-500 to-pink-500
+            text-white
+            font-semibold
+            hover:scale-105
+            transition
+            "
+          >
+            Send Me Email 💌
+          </a>
 
         </div>
-
 
       </div>
 

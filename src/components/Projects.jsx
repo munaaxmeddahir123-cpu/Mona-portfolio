@@ -1,264 +1,143 @@
 import teamflow from "../assets/projects/teamflow.png";
 import SWIB from "../assets/projects/SWIB.png";
-
+import connect from "../assets/projects/Connect.png";
 
 function Projects() {
-
   const projects = [
+    {
+      title: "Connect (Coming Soon)",
+      description:
+        "A full-stack application focused on connecting people through a modern and user-friendly platform.",
+      image: connect,
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      github: "https://github.com/yourusername/connect",
+      demo: "https://your-connect-vercel-link.com",
+      video: "https://your-connect-video-link.com",
+    },
 
     {
       title: "TeamFlow Management System",
-
       description:
-        "A modern team management system that helps teams organize projects, tasks, and collaboration efficiently.",
-
+        "A modern team management system built with React that helps teams organize projects, tasks, and collaboration efficiently.",
       image: teamflow,
-
       technologies: [
         "React",
         "Tailwind CSS",
         "Context API",
-        "JavaScript"
+        "JavaScript",
       ],
-
       github:
-        "https://github.com/yourusername/teamflow",
-
-      demo:
-        "https://your-teamflow-vercel-link.com",
-
+        "https://github.com/munaaxmeddahir123-cpu/Team-flow-management-system",
+      demo: "https://team-flow-management-system.vercel.app",
       video:
-        "https://your-video-link.com"
+        "https://www.tiktok.com/@riseacadmey/video/7666456957431123221",
     },
-
 
     {
       title: "Ganacsatada Haweenka Soomaaliyeed (SWIB)",
-
       description:
         "A responsive platform designed to support Somali women entrepreneurs and showcase their businesses.",
-
       image: SWIB,
-
       technologies: [
         "HTML",
         "CSS",
         "JavaScript",
-        "Responsive Design"
+        "Responsive Design",
       ],
-
       github:
         "https://github.com/munaaxmeddahir123-cpu/ganacsatada-h-somaliyeed-1",
-
       demo:
         "https://ganacsatada-h-somaliyeed-1-n7j0f09eb-muna-ahmed-s-projects.vercel.app",
-
       video:
-        "https://www.tiktok.com/@riseacadmey/video/7637890477458754837"
+        "https://www.tiktok.com/@riseacadmey/video/7637890477458754837",
     },
-
-
-    {
-      title: "Connect",
-
-      description:
-        "A full-stack application focused on connecting people through a modern and user-friendly platform.",
-
-      image: teamflow,
-
-      technologies: [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Express"
-      ],
-
-      github:
-        "https://github.com/yourusername/connect",
-
-      demo:
-        "https://your-connect-vercel-link.com",
-
-      video:
-        "https://your-video-link.com"
-    }
-
   ];
 
-
   return (
+    <section className="py-16">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <div
+            key={project.title}
+            className="rounded-2xl p-6 bg-white dark:bg-gray-900 shadow-lg"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover rounded-xl mb-5"
+            />
 
-    <section
-      id="projects"
-      className="py-20 px-6 bg-gray-950"
-    >
+            <h3 className="text-xl font-bold mb-3">
+              {project.title}
+            </h3>
 
-      <div className="max-w-6xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              {project.description}
+            </p>
 
-
-        <h2
-          className="
-          text-3xl
-          sm:text-4xl
-          font-bold
-          text-center
-          text-purple-400
-          mb-12
-          "
-        >
-          My Projects
-        </h2>
-
-
-
-        <div
-          className="
-          grid
-          grid-cols-1
-          md:grid-cols-2
-          lg:grid-cols-3
-          gap-8
-          "
-        >
-
-
-          {projects.map((project) => (
-
-            <div
-              key={project.title}
-              className="
-              bg-black
-              rounded-3xl
-              overflow-hidden
-              border
-              border-white/10
-              hover:-translate-y-3
-              transition
-              duration-300
-              shadow-xl
-              "
-            >
-
-
-              <img
-                src={project.image}
-                alt={project.title}
-                className="
-                w-full
-                h-52
-                object-cover
-                "
-              />
-
-
-
-              <div className="p-6">
-
-
-                <h3 className="text-xl font-bold">
-                  {project.title}
-                </h3>
-
-
-
-                <p className="text-gray-400 mt-3 leading-6">
-                  {project.description}
-                </p>
-
-
-
-
-                <div className="flex flex-wrap gap-2 mt-5">
-
-                  {project.technologies.map((tech) => (
-
-                    <span
-                      key={tech}
-                      className="
-                      px-3
-                      py-1
-                      text-sm
-                      rounded-full
-                      bg-purple-500/20
-                      text-purple-300
-                      "
-                    >
-                      {tech}
-                    </span>
-
-                  ))}
-
-                </div>
-
-
-
-
-                <div className="flex flex-wrap gap-4 mt-6">
-
-
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                    text-purple-400
-                    hover:underline
-                    "
-                  >
-                    🌐 Live Demo
-                  </a>
-
-
-
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                    text-purple-400
-                    hover:underline
-                    "
-                  >
-                    💻 GitHub
-                  </a>
-
-
-
-                  <a
-                    href={project.video}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                    text-purple-400
-                    hover:underline
-                    "
-                  >
-                    🎥 Video
-                  </a>
-
-
-                </div>
-
-
-              </div>
-
-
+            <div className="flex flex-wrap gap-2 mb-5">
+              {project.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="
+                  px-3 py-1 text-sm rounded-full
+                  bg-purple-500/10
+                  text-purple-600
+                  dark:text-purple-300
+                  "
+                >
+                  {tech}
+                </span>
+              ))}
             </div>
 
+            <div className="flex flex-wrap gap-3">
+              <a
+                href={project.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                px-4 py-2 text-sm rounded-full
+                bg-gradient-to-r from-purple-500 to-pink-500
+                text-white hover:scale-105 transition
+                "
+              >
+                🌐 Live Demo
+              </a>
 
-          ))}
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                px-4 py-2 text-sm rounded-full
+                border border-purple-500
+                text-purple-600
+                dark:text-purple-300
+                hover:bg-purple-500/10 transition
+                "
+              >
+                💻 GitHub
+              </a>
 
-
-        </div>
-
-
+              <a
+                href={project.video}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                px-4 py-2 text-sm rounded-full
+                border border-pink-500
+                text-pink-500
+                hover:bg-pink-500/10 transition
+                "
+              >
+                🎥 Video
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
-
-
     </section>
-
   );
 }
-
-
 export default Projects;

@@ -7,20 +7,31 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 function App() {
+
   return (
-    <>
+
+    <div className="
+      bg-white text-black
+      dark:bg-black dark:text-white
+      overflow-hidden
+    ">
+
       <Navbar />
 
-      <main className="bg-black text-white overflow-hidden">
+      <main>
+
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Contact />
+
       </main>
 
       <Footer />
-    </>
+
+    </div>
+
   );
 }
 
