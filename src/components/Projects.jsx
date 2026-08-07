@@ -47,7 +47,7 @@ function Projects() {
       github:
         "https://github.com/munaaxmeddahir123-cpu/ganacsatada-h-somaliyeed-1",
       demo:
-        "https://ganacsatada-h-somaliyeed-1-n7j0f09eb-muna-ahmed-s-projects.vercel.app",
+        "https://ganacsatada-h-somaliyeed-1-d1ax.vercel.app/",
       video:
         "https://www.tiktok.com/@riseacadmey/video/7637890477458754837",
     },
